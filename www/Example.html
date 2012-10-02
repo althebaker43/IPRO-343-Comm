@@ -1,0 +1,87 @@
+
+<!-- saved from url=(0064)http://code.google.com/edu/ajax/tutorials/samples/dhtmltest.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Example</title>
+<style type="text/css">
+
+body {font: 14px arial;
+	     color: #000066;
+}
+
+#myText {position: absolute;
+	top: 100px;
+	left: 400px;
+	font: 24px arial;
+	font-weight: 900;
+}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+
+var texttop = 100;
+var textleft = 400;
+
+function vanish(flag) {
+	var myObj = new getObj('myText');
+	myObj.style.visibility = (flag) ? 'hidden' : 'visible'
+}
+
+function moveUpDown(amount) {
+	var myObj = new getObj('myText');
+	texttop += amount;
+	myObj.style.top = texttop;
+}
+
+function moveLR(amount) {
+	var myObj = new getObj('myText');
+	textleft += amount;
+	myObj.style.left = textleft;
+}
+
+
+function changeColor(color) {
+	var myObj = new getObj('myText');
+	myObj.style.color = color;
+}
+
+function changeStyle(style) {
+	var myObj = new getObj('myText');
+	myObj.style.fontStyle = style;
+}
+
+function getObj(name) {
+	if (document.getElementById) {
+		this.obj = document.getElementById(name);
+		this.style = document.getElementById(name).style;
+	}
+	else
+		return;
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="myText" style="color: green; font-style: italic; visibility: visible; left: 360px; ">Change Me!</div>
+
+<p>
+<a class="page" href="javascript:moveUpDown(40);">Down</a><br>
+<a class="page" href="javascript:moveUpDown(-40);">Up</a><br>
+<a class="page" href="javascript:moveLR(-40);">Left</a><br>
+<a class="page" href="javascript:moveLR(+40);">Right</a><br>
+</p><p>
+<a class="page" href="javascript:changeColor('orange')">Orange</a><br>
+<a class="page" href="javascript:changeColor('green')">Green</a><br>
+<a class="page" href="javascript:changeColor('purple')">Purple</a><br>
+</p><p>
+<a class="page" href="javascript:changeStyle('italic')">Italic</a><br>
+<a class="page" href="javascript:changeStyle('normal')">Normal</a><br>
+</p><p>
+<a class="page" href="javascript:vanish(1)">Vanish!</a><br>
+<a class="page" href="javascript:vanish(0)">Re-appear</a><br>
+</p><p>
+
+
+
+</p></body></html>
