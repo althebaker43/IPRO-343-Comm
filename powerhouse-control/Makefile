@@ -1,12 +1,24 @@
 SOURCE_DIR=src
-BINARY_DIR=bin
+INCLUDE_DIR=include
+OUTPUT_DIR=bin
 
-COMMUNICATIONS=comm
+MAIN=Main
+COMMUNICATIONS=Comm
 
-comm.o : clean
+$(MAIN).o : clean \
+	    $(COMMUNICATIONS).o
 	gcc \
-		-c $(SOURCE_DIR)/$(COMMUNICATIONS).c \
-		-o $(BINARY_DIR)/$(COMMUNICATIONS).o
+		-c \
+		-I $(INCLUDE_DIR)\
+		$(SOURCE_DIR)/$(MAIN).c \
+		-o $(OUTPUT_DIR)/$(MAIN).o
+
+$(COMMUNICATIONS).o : clean
+	gcc \
+		-c \
+		-I $(INCLUDE_DIR)\
+		$(SOURCE_DIR)/$(COMMUNICATIONS).c \
+		-o $(OUTPUT_DIR)/$(COMMUNICATIONS).o
 
 clean :
 	rm -rf bin/*

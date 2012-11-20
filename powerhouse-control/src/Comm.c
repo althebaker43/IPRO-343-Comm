@@ -8,7 +8,8 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 
-#include "comm.h"
+#include "Main.h"
+#include "Comm.h"
 
 int
 Init_Comm (char* host,
@@ -32,14 +33,11 @@ Init_Comm (char* host,
 
     sprintf (port_str, "%d", port);
    
-    fprintf (log,
-             "INFO: Initializing communications.\n");
-    fprintf (log,
-             "INFO: Using host %s.\n",
-             host);
-    fprintf (log,
-             "INFO: Using port %s.\n",
-             port_str);
+    Print_To_Log ("INFO: Initializing communications.");
+    Print_To_Log ("INFO: Using host %s.",
+                  host);
+    Print_To_Log ("INFO: Using port %s.",
+                  port_str);
 
     memset (&addr_info_hints,
             0,
@@ -56,9 +54,8 @@ Init_Comm (char* host,
                                     &addr_info_results);
     if (addr_info_retval != 0)
     {
-        fprintf (log,
-                 "ERROR: Could not get address information: %s\n",
-                 gai_strerror (addr_info_retval));
+        Print_To_Log ("ERROR: Could not get address information: %s",
+                      gai_strerror (addr_info_retval));
         return -1;
     }
 
@@ -86,8 +83,7 @@ Init_Comm (char* host,
 
     if (addr_info_result_pres == NULL)
     {
-        fprintf (log,
-                 "ERROR: Could not establish connection.\n");
+        Print_To_Log ("ERROR: Could not establish connection.");
         return -1;
     }
 
@@ -98,8 +94,7 @@ Init_Comm (char* host,
                           F_GETFL);
     if (socket_flags == -1)
     {
-        fprintf (log,
-                 "ERROR: Could not get socket file flags.\n");
+        Print_To_Log ("ERROR: Could not get socket file flags.");
         return -1;
     }
 
@@ -109,8 +104,7 @@ Init_Comm (char* host,
                                  socket_flags | O_NONBLOCK);
     if (socket_fcntl_retval == -1)
     {
-        fprintf (log,
-                 "ERROR: Could not set socket file flags.\n");
+        Print_To_Log ("ERROR: Could not set socket file flags.");
         return -1;
     }
 
@@ -119,13 +113,11 @@ Init_Comm (char* host,
                           "r+");
     if (socket == NULL)
     {
-        fprintf (log,
-                 "ERROR: Could not open socket stream.");
+        Print_To_Log ("ERROR: Could not open socket stream.");
         return -1;
     }
 
-    fprintf (log,
-             "INFO: Communications initialized.\n");
+    Print_To_Log ("INFO: Communications initialized.");
 
     return 0;
 }
