@@ -1,10 +1,11 @@
 TARGET = helloworld
+OUTPUT_DIR = ../../www/cgi-bin
 
 build :
-	gcc $(TARGET).c -o ../hello
+	gcc $(TARGET).c -o $(OUTPUT_DIR)/$(TARGET)
 
 run : build
-	./$(TARGET)
+	$(OUTPUT_DIR)/$(TARGET)
 
 clean :
-	rm -f $(TARGET)
+	rm -f $(OUTPUT_DIR)/$(TARGET)

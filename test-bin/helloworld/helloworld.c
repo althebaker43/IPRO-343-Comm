@@ -3,8 +3,8 @@
 int
 main (void)
 {
-    printf ("Content-Type: text/plain; charset=us-ascii\n\n");
-    printf ("Hello world\n\n");
+    printf ("Content-Type: text/javascript\n\n");
+    printf ("PageContent=\"Hello, world!\";\n\n");
 
     return 0;
 }
