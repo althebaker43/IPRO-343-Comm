@@ -1,0 +1,18 @@
+h1 {
+margin: 5px;
+padding-left: 10px;
+padding-right: 10px;
+background: #eeeeed;
+color: blue;
+width: 100%;
+font-size: 44px;
+}
+.test{
+margin: 5px;
+padding-left: 10px;
+padding-right: 10px;
+background: #eeeeee;
+color: red;
+width: 100%;
+font-size: 36px;
+}

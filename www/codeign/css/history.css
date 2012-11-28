@@ -1,0 +1,62 @@
+#System-hist{position: absolute; top:  20px; /*right: 500px;width: 400px*/}
+#battery-hist{position: absolute; top: 300px; /*right:  500px;width: 400px*/}
+
+#System-hist
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 45px;
+	height: 200px;
+	width: 480px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+#System-hist th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 10px 8px;
+	border-bottom: 2px solid #6678b1; 
+}
+
+ #System-hist td
+ { 	
+ 	border-bottom: 1px solid #ccc;
+ 	color: #669;
+ 	text-align: center;
+	padding: 9px 8px 0px 8px;
+ }
+
+
+
+ #battery-hist
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 45px;
+	height: 200px;
+	width: 480px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+ #battery-hist th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 10px 8px;
+	border-bottom: 2px solid #6678b1; 
+}
+
+ #battery-hist td
+ { 	
+ 	border-bottom: 1px solid #ccc;
+ 	color: #669;
+ 	text-align: center;
+	padding: 9px 8px 0px 8px;
+ }

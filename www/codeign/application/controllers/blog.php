@@ -10,7 +10,6 @@ class Blog extends CI_Controller {
 	{
 		$data['title'] = "Maverick is ";
 		$data['heading'] = "My first codeign page";
-		$data['todo'] = array('eat','shit','sleep');
 		$this->load->view('blog_view',$data);
 
 	}

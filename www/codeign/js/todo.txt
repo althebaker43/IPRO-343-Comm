@@ -1,0 +1,7 @@
+-set a timer interal to go off every 20 seconds or so
+-this function will then set up an ajax call and call a php function to get the data 
+from a file or the DB.
+- this data will then be pass to the graphing script and the ajax call will be completed
+
+-still need to automate the population of the tables 
+	- throw some javascript in the html.. to pull data from DB

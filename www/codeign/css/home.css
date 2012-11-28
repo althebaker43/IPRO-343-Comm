@@ -1,0 +1,172 @@
+/*
+	 Battery power system CSS
+	 by Dwayne Charp and John Siah 
+	 IIT 
+*/
+
+*
+{ 
+	margin: 0; padding: 0; 
+}
+
+body 
+{ 
+	font: 12px Georgia, serif;background-color: #B0B0B0;
+}
+
+#logo
+{
+	z-index:-1;left:-150px;top:0px;
+}
+
+html 
+{
+ overflow-y: scroll; 
+}
+
+a 
+{ 
+	text-decoration: none; 
+}
+
+a:focus 
+{ 
+	outline: 0;
+}
+
+p 
+{ 
+	font-size: 15px; margin: 0 0 20px 0; 
+}
+
+#page-wrap 
+{ 
+	width: 440px; margin: 80px auto;
+}
+
+h1 
+{ 
+	font: bold 40px Sans-Serif; margin: 0 0 20px 0;
+}
+
+/* Generic Utility */
+.hide 
+{
+ position: absolute; top: -9999px; left: -9999px; 
+}
+
+
+                          /*Main div section*/
+#main-div 
+{
+	padding: 10px; margin-left: auto; margin-right: auto; -moz-box-shadow: 0 0 5px #666; 
+	-webkit-box-shadow: 0 0 5px #666;width: 1500px;height: 800px 
+}
+
+#main-div .nav 
+{ 
+	overflow: hidden; margin: 0 0 10px 0;
+}
+
+#main-div .nav li 
+{
+	 width: 97px; float: left; margin: 0 10px 0 0;
+}
+
+#main-div .nav li.last 
+{ 
+	margin-right: 0; 
+}
+
+#main-div .nav li a 
+{ 
+	display: block; padding: 5px; background: #959290; color: white; 
+	font-size: 10px; text-align: center; border: 0;
+}
+
+#main-div .nav li a:hover
+{ 
+	background-color: #111; 
+}
+
+#main-div ul
+{ 
+	list-style: none; 
+}
+
+#main-div ul li a 
+{ 
+	display: block; border-bottom: 1px solid #666; padding: 4px; color: #666; 
+}
+
+#main-div ul li a:hover 
+{ 
+	background: #fe4902; color: white; 
+}
+
+#main-div ul li:last-child a 
+{ 
+	border: none; 
+}
+
+#main-div ul li.nav-one a.current, #main-div ul.home li a:hover 
+{ 
+	background-color: #0575f4; color: black; 
+}
+
+#main-div ul li.nav-two a.current, #main-div ul.data li a:hover 
+{ 
+	background-color: #d30000; color: white; 
+}
+
+#main-div ul li.nav-three a.current, #main-div ul.history li a:hover 
+{ 
+	background-color: #8d01b0; color: white; 
+}
+
+#main-div ul li.nav-four a.current, #main-div ul.settings li a:hover 
+{ 
+	background-color: #FE4902; color: white; 
+}
+
+
+
+
+                       /*Current data table section*/
+
+#current-data
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 45px;
+	height: 400px;
+	width: 480px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+#current-data th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 10px 8px;
+	border-bottom: 2px solid #6678b1; 
+}
+
+ #current-data td
+ { 	
+ 	border-bottom: 1px solid #ccc;
+ 	color: #669;
+ 	text-align: center;
+	padding: 9px 8px 0px 8px;
+ }
+
+
+                          
+
+
+
+
+

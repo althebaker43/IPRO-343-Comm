@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>IPRO 343</title>
+  
+  <link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css">
+  
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+  <script src="<?php echo base_url(); ?>js/batterytabs.jquery.js"></script>
+  <script>
+  $(function() {
+
+    $("#main-div").batteryTabs();
+
+    $("#example-two").batteryTabs({
+      "speed": 200
+    });
+    
+  });
+  </script>
+</head>
+
+<body>
+
+ <!--
+ <div id="page-wrap">-->
+
+  <h1>Battery System</h1>
+
+
+
+  <div id="main-div">
+
+    <ul class="nav">
+      <li class="nav-one"><a href="#home" class="current">Battery Home</a></li>
+      <li class="nav-two"><a href="#data">Realtime data</a></li>
+      <li class="nav-three"><a href="#history">History</a></li>
+      <li class="nav-four last"><a href="#settings">Settings</a></li>
+    </ul>
+
+    <div id = "wrap-div" class="list-wrap">
+
+      <ul id="home">
+        <p>This will be the main screen will show the current batter stats and overall system health</p>
+        <table id = "current-data">
+          <tr>
+              <td></td>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+              <td>Cell 4</td>
+          </tr>
+          <tr>
+              <td>DC Voltage</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>DC Current</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>Power</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>Temperature</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+</head>
+<body>
+      </ul>
+
+      <ul id="data" class="hide">
+        <p>This will show visaul realtime information of the system and batteries</p>
+      </ul>
+
+      <ul id="history" class="hide">
+        <p>View the system history</p>
+      </ul>
+
+      <ul id="settings" class="hide">
+        <p>Settings-mainly for the technician</p>
+      </ul>
+
+    </div> <!-- END List Wrap -->
+
+  </div>
+
+  <!--</div>-->
+  
+</body>
+
+</html>

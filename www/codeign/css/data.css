@@ -1,0 +1,11 @@
+.graph-area {
+	width: 550px;
+	height: 255px;	
+}
+
+
+
+#data-1{position: absolute; top:  20px; right: 500px;width: 400px}
+#data-2{position: absolute; top:  20px; left:    0px;width: 400px}
+#data-3{position: absolute; top: 300px; left:  300px;width: 400px}
+ 
