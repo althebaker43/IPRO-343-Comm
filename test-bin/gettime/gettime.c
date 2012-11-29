@@ -20,7 +20,7 @@ main (void)
     }
 
     printf ("Content-Type: text/javascript\n\n");
-    printf ("CurrentTime=\"%s\";\n\n", current_time_str);
+    printf ("function UpdateTime(){return \"%s\";}\n\n", current_time_str);
 
     return 0;
 }
